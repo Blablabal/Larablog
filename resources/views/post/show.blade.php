@@ -32,7 +32,7 @@
 
 					<li class="list-group-item">
 						<strong>
-							{{ $comment->user()->pluck('name')[0] }}
+							{{ $comment->user()->get()->implode('name') }}
 							{{ $comment->created_at->diffForHumans() }}: &nbsp;
 						</strong>
 
